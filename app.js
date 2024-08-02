@@ -89,34 +89,42 @@ let arr = [1,40,5,10,5,90,9]
 
 //more automatic work (using local storage)
 
-function provideStudent() {
-    // Retrieve existing students from localStorage each time
-    const studentExist = localStorage.getItem("students");
-    const students = studentExist ? JSON.parse(studentExist) : [];
+// function provideStudent() {
+//     // Retrieve existing students from localStorage each time
+//     const studentExist = localStorage.getItem("students");
+//     const students = studentExist ? JSON.parse(studentExist) : [];
     
 
-    // Prompt for student details
-    const str = {
-        name: prompt("Enter name"),
-        rollnum: +prompt("Enter roll number"),
-        teacher: prompt("Enter teacher name"),
-        className: prompt("Enter class name")
-    };
+//     // Prompt for student details
+//     const str = {
+//         name: prompt("Enter name"),
+//         rollnum: +prompt("Enter roll number"),
+//         teacher: prompt("Enter teacher name"),
+//         className: prompt("Enter class name")
+//     };
 
-    // Add the new student to the array
-    students.push(str);
-    console.log(students);
+//     // Add the new student to the array
+//     students.push(str);
+//     console.log(students);
 
-    // Convert the students array to a JSON string
-    const stringify = JSON.stringify(students);
+//     // Convert the students array to a JSON string
+//     const stringify = JSON.stringify(students);
 
-    // Store the JSON string in localStorage under the key "students"
-    localStorage.setItem("students", stringify);
-}
-
-
+//     // Store the JSON string in localStorage under the key "students"
+//     localStorage.setItem("students", stringify);
+// }
 
 
+//dom
 
-
- 
+const  para = document.getElementById("haseeb")
+para.innerText = "haseeb"
+para.style.color = "red"
+para.style.backgroundColor = "cyan"
+setInterval(function name() {
+if(para.style.display === "none" ){
+    para.style.display = "block"
+} else{
+    para.style.display = "none"
+}   
+},200)
