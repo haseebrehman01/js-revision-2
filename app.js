@@ -117,14 +117,54 @@ let arr = [1,40,5,10,5,90,9]
 
 //dom
 
-const  para = document.getElementById("haseeb")
-para.innerText = "haseeb"
-para.style.color = "red"
-para.style.backgroundColor = "cyan"
-setInterval(function name() {
-if(para.style.display === "none" ){
-    para.style.display = "block"
-} else{
-    para.style.display = "none"
-}   
-},200)
+// const  para = document.getElementById("haseeb")
+// para.innerText = "haseeb"
+// para.style.color = "red"
+// para.style.backgroundColor = "cyan"
+// setInterval(function name() {
+// if(para.style.display === "none" ){
+//     para.style.display = "block"
+// } else{
+//     para.style.display = "none"
+// }   
+// },200)
+
+
+
+//date sand time 
+
+// let date = new Date()//object bangaya 
+// console.log(date.getTime())
+// console.log(date.getFullYear())
+// console.log(date.getDay())
+// console.log(date.getMonth())//0 sa start hota
+// console.log(date.getSeconds())
+// console.log(date.getHours())
+// console.log(date.getMilliseconds())
+
+//small program
+// const date1 = new Date('2024-01-01');
+// const date2 = new Date('2027-01-01');
+
+// const diff = date2 - date1; // Difference in milliseconds
+// const millisecondsPerYear = 1000 * 60 * 60 * 24 * 365.25;
+// const years = (diff / millisecondsPerYear).toFixed(0);
+// console.log(years); 
+
+
+
+//digital clock
+setInterval (function(){
+    const hr = document.getElementById("hr")
+const min = document.getElementById("min")
+const sec = document.getElementById("sec")
+    const date = new Date()
+    hr.innerHTML = date.getHours()
+    min.innerHTML = date.getMinutes()
+    sec.innerHTML = date.getSeconds()
+},1000)
+
+
+
+
+
